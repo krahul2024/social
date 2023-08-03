@@ -13,15 +13,15 @@ export const values = {
 }
 
 export const connect = () => {
-	mongoose.connect('mongodb://0.0.0.0:27017/socialDB', { useNewUrlParser: true })
-    .then(() => console.log('Connected to the database successfully!'))
-    .catch((error) => {
-        console.log(`There was an error connecting to the database. ${error}`); // Printing the error if the connection fails
-    });
-	// const uri = `mongodb+srv://sandipkumar2024:${values.mongo_password}@cluster0.vwsyauc.mongodb.net/?retryWrites=true&w=majority`;
-	// // console.log({uri})
-	// mongoose.connect(uri , {
-	//  useNewUrlParser:true , useUnifiedTopology:true
-	// }).then(() => console.log('Connected to the database successfully'))
-	//  .catch(error => console.log('There was an error connecting to the database. Please try again later.' , { error }))
+	// mongoose.connect('mongodb://0.0.0.0:27017/socialDB', { useNewUrlParser: true })
+    // .then(() => console.log('Connected to the database successfully!'))
+    // .catch((error) => {
+    //     console.log(`There was an error connecting to the database. ${error}`); // Printing the error if the connection fails
+    // });
+	const uri = `mongodb+srv://sandipkumar2024:${values.mongo_password}@cluster0.vwsyauc.mongodb.net/?retryWrites=true&w=majority`;
+	// console.log({uri})
+	mongoose.connect(uri , {
+	 useNewUrlParser:true , useUnifiedTopology:true
+	}).then(() => console.log('Connected to the database successfully'))
+	 .catch(error => console.log('There was an error connecting to the database. Please try again later.' , { error }))
 }
