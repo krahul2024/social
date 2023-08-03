@@ -24,7 +24,7 @@ useEffect(() => {
 	if(allConnections === true) getUserConnections();
 },[allConnections])
 
-console.log({})
+console.log({profile})
 
 if(profile?.connections?.length>0) return (<> 
 

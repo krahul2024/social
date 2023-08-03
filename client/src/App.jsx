@@ -12,6 +12,7 @@ import axios from 'axios'
 import socketIO from 'socket.io-client'
 import { UserContextProvider } from './userContext'
 axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL;
+axios.defaults.withCredentials = true ; 
 
 function App() {
   return (
