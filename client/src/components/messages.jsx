@@ -3,7 +3,6 @@ import React, { useState, useContext, useEffect, useRef } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { UserContext } from '../userContext';
 import socketIO from 'socket.io-client';
-import baseUrl from './baseUrl.js';
 import Image from './images'
 
 const Messages = () => {
@@ -17,7 +16,7 @@ const Messages = () => {
 
   // establishing the connection with the server when this component is rendered
   useEffect(() => {
-    const socket = socketIO.connect('http://localhost:5000');
+    const socket = socketIO.connect('https://social-back.vercel.app');
     setSocket(socket);
 
     return () => {

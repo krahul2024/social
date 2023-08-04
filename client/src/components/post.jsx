@@ -4,7 +4,6 @@ import p1 from '../images/image-1.jpg';
 import PostReaction from './postReaction';
 import { UserContext } from '../userContext';
 import Image from './images.jsx'
-import baseUrl from './baseUrl.js'
 
 const Post = ({ post , user }) => {
   const {
@@ -82,7 +81,7 @@ const Post = ({ post , user }) => {
         </div>
         <div className="grid grid-cols-3 gap-1">
           {post.photos.map((src, index) => (
-            <NavLink target='_blank' to = {src.includes('https')?src:baseUrl + src} key={index} className="aspect-w-1 aspect-h-1">
+            <NavLink target='_blank' to = {src} key={index} className="aspect-w-1 aspect-h-1">
               <Image path={src} className="object-cover rounded-md h-full w-full" alt="Post Image"/>
             </NavLink>
           ))}

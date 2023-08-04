@@ -31,7 +31,7 @@ const ProfileContent = ({ user }) => {
       <div className="grid grid-cols-3 gap-1">
         {photos.length > 0 &&
           photos.map((item, index) => (
-            <NavLink to={item?.photo?.includes('https')?item.photo:`http://localhost:5000/uploads/${item.photo}`} key={index} target="_blank" className="relative">
+            <NavLink to={item.photo} key={index} target="_blank" className="relative">
               <Image
                 path={item.photo}
                 className="h-36 md:h-48  object-fill w-full rounded-lg"

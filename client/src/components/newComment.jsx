@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom'
 import Post from './post'
 import PostDetails from './postDetails'
 import { UserContext } from '../userContext'
-import p1 from '../images/image-1.jpg'
 import axios from 'axios'
 import Image from './images'
+
 const NewComment = ({ caption , onChange }) => {
   const {profile , setProfile } = useContext(UserContext) 
   const handleInput = (e) => {

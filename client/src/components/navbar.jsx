@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef , useContext} from 'react';
 import {NavLink , useNavigate , useLocation} from 'react-router-dom'
 import {UserContext} from '../userContext'
 import axios from 'axios'
-import baseUrl from './baseUrl.js'
 import Image from './images'
 
 const Navbar = () => {

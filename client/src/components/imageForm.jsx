@@ -9,7 +9,6 @@ const App = () => {
   };
 
   console.log({previews})
-
   return (
     <div className="mt-32">
       <h1>Image Uploader App</h1>

@@ -1,9 +1,9 @@
 import React, {useState , useEffect , useContext} from 'react' 
 import {NavLink , useNavigate} from 'react-router-dom' 
 import {UserContext} from '../userContext'
-import baseUrl from './baseUrl.js'
 import axios from 'axios'
 import Image from './images'
+
 
 const Header = ({user}) => {
   const navigate = useNavigate() 
