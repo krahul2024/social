@@ -35,17 +35,17 @@ app.use(express.static('public'));
 app.use('/uploads', express.static(file_path + '/uploads'))
 
 // Route handlers for various routes
-app.use('/server/auth', authRoutes);
-app.use('/server/user', userRoutes);
-app.use('/server/post', postRoutes);
-app.use('/server/images', imageRoutes);
+app.use('/auth', authRoutes);
+app.use('/user', userRoutes);
+app.use('/post', postRoutes);
+app.use('/images', imageRoutes);
 
 // Connecting to the MongoDB database
 mongoose.set('strictQuery', false);
 mongoose.set('strictPopulate', false);
 
 
-app.get('/server', (req, res) => {
+app.get('/', (req, res) => {
     res.send('hello bro'); // Route handler for the root endpoint
 });
 
