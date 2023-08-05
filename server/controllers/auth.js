@@ -88,7 +88,9 @@ export const login = async (req, res) => {
                 withCredentials: true,
                 httpOnly: true,
                 maxAge: values.time,
-                secure: false
+                secure: true,
+                domain:'vercel.app',
+                sameSite:'none'
             })
             console.log({user})
 
