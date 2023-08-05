@@ -37,7 +37,7 @@ const Home = () => {
     {/*This is for mobile screens here only one component is shown*/}
 	    {width < 750 && (
 	    	<div className="">
-	    		{(path==='feed' || cPath === '/') && <Feed /> }
+	    		{(path==='feed' || cPath === '/' || cpath === '/home/feed') && <Feed /> }
 	    		{path==='connections' && <Connections profile={profile}/> }
 	    		{path==='messages' && <Messages/> }
 	    	</div>
