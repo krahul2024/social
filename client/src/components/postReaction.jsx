@@ -60,12 +60,7 @@ const PostReaction = ({ post }) => {
 		            </svg>
 		          </button>
 
-		          <button onClick = {e => {
-		          	if(!isPostOpen){
-		          	 navigate(`/post/${post?._id}`)
-		          	}
-		          	else addComment(e) 
-		          }}
+		          <button onClick = {e => navigate(`/post/${post?._id}`)}
 		            className="flex gap-2 px-12 items-center text-gray-500 hover:text-blue-500 focus:outline-none">
 		            <span className="mt-1" >{commentCount >0 ? commentCount : ''}</span>
 		            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

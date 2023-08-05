@@ -27,6 +27,7 @@ const file_path = path.resolve()
 
 const app = express();
 app.use(cookieParser());
+
 app.use(cors({ origin:'https://rahul-social.vercel.app', credentials: true }));
 app.use(express.urlencoded({ extended: true }));
 app.set('trust proxy' , 1) ; 
