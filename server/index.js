@@ -27,12 +27,6 @@ const file_path = path.resolve()
 
 const app = express();
 app.use(cookieParser());
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://rahul-social.vercel.app');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  next();
-});
 app.use(cors({ origin:'https://rahul-social.vercel.app', credentials: true }));
 app.use(express.urlencoded({ extended: true }));
 app.set('trust proxy' , 1) ; 
@@ -57,12 +51,11 @@ app.get('/', (req, res) => {
 
 // doing all the server related work 
 const server = createServer(app);
-const io = require('socket.io')(httpServer, {
-  cors: {
-    origin: "https://rahul-social.vercel.app",
-    methods: ["GET", "POST"]
-  }
-});
+const io = new Server(server, {
+    cors: {
+        origin: 'https://rahul-social.vercel.app'
+    }
+})
 
 io.on('connection', async (socket) => {
     connect()
