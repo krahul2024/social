@@ -59,7 +59,7 @@ app.get('/', (req, res) => {
 const server = createServer(app);
 const io = require('socket.io')(httpServer, {
   cors: {
-    origin: "https://rahul-social.vercel.app",
+    origin: "*",
     methods: ["GET", "POST"]
   }
 });
