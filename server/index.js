@@ -57,11 +57,12 @@ app.get('/', (req, res) => {
 
 // doing all the server related work 
 const server = createServer(app);
-const io = new Server(server, {
-    cors: {
-        origin: 'https://rahul-social.vercel.app'
-    }
-})
+const io = require('socket.io')(httpServer, {
+  cors: {
+    origin: "https://rahul-social.vercel.app",
+    methods: ["GET", "POST"]
+  }
+});
 
 io.on('connection', async (socket) => {
     connect()
