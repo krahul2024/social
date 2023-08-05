@@ -89,7 +89,6 @@ export const login = async (req, res) => {
                 httpOnly: true,
                 maxAge: values.time,
                 secure: true,         // Set this to true if you're serving over HTTPS
-                domain: '.vercel.app', // Note the dot before the domain
                 sameSite: 'none'
             });
 
