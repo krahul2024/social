@@ -1,6 +1,6 @@
 # social : Social-Media application 
 Introduction: This is a simple social-media application, its features are listed below
-The project is deployed at [Social-app](rahul-social.vercel.app). <br>
+The project is deployed at [Social-app](https://rahul-social.vercel.app). <br>
 ### features
 * Login/Register
 * Create Posts(with images, Gifs, captions)
