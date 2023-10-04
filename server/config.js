@@ -18,6 +18,7 @@ export const connect = () => {
     // .catch((error) => {
     //     console.log(`There was an error connecting to the database. ${error}`); // Printing the error if the connection fails
     // });
+	
 	const uri = `mongodb+srv://sandipkumar2024:${values.mongo_password}@cluster0.vwsyauc.mongodb.net/?retryWrites=true&w=majority`;
 	console.log({uri})
 	mongoose.connect(uri , {

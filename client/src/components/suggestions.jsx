@@ -116,7 +116,7 @@ return (<>
 				</div>
 			))}
 		</div>
-		{profile?.receivedRequests.length>0 && (
+		{profile?.receivedRequests?.length>0 && (
 			<div className="p-2 mt-3">
 			<span className="px-2 py-1 text-lg font-bold">Connection Requests</span>
 			{profile.receivedRequests.map((requestUser , index) => (

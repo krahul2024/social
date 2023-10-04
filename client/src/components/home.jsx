@@ -4,7 +4,6 @@ import {useParams , NavLink , useLocation } from 'react-router-dom'
 import Feed from './feed';
 import ExtraFeed from './extraFeed';
 import Connections from './connections'
-import Messages from './messages'
 import {UserContext } from '../userContext'
 import Image from './images'
 
@@ -39,7 +38,6 @@ const Home = () => {
 	    	<div className="">
 	    		{(cPath === '/' || cpath === '/home/feed') && <Feed /> }
 	    		{path==='connections' && <Connections profile={profile}/> }
-	    		{path==='messages' && <Messages/> }
 	    	</div>
 	    )}
 
@@ -48,7 +46,6 @@ const Home = () => {
 	    		<div className={`${path==='messages'?'w-[65%]':'w-[60%]'} overflow-y-auto`}>
 	    			{(path==='feed' || cPath === '/') && <Feed /> }
 		    		{path==='connections' && <Connections profile={profile}/> }
-		    		{path==='messages' && <Messages/> }
 	    		</div>
 	    		<div className="w-[40%] xl:w-[35%]">
 	    			<ExtraFeed /> 
@@ -65,7 +62,6 @@ const Home = () => {
 	    		<div className="w-[50%]">
 	    			{(path==='feed' || cPath === '/') && <Feed /> }
 		    		{path==='connections' && <Connections profile={profile}/> }
-		    		{path==='messages' && <Messages/> }
 	    		</div>
 
 	    		<div className="w-[27%] 2xl:w-[24%]">
